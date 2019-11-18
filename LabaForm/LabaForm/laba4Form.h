@@ -1,5 +1,5 @@
 #pragma once
-#include "Func.h"
+#include "cmath"
 
 namespace LabaForm {
 
@@ -238,15 +238,22 @@ namespace LabaForm {
 		this->Owner->Close();
 		this->Close();
 	}
-
+	double toDouble(TextBox^ textBox)
+	{
+		return Convert::ToDouble(textBox->Text);
+	}
+	void inTextBox(TextBox^ textBox, double a)
+	{
+		textBox->Text = "" + a;
+	}
 	double laba4Func(TextBox^ x, TextBox^ y)
 	{
-		double X = Convert::ToDouble(x->Text);
-		double Y = Convert::ToDouble(x->Text);
+		double X = toDouble(x);
+		double Y = toDouble(y);
 		return pow(5.2, 3) * log10(X + Y) / (X - 1 / (0.45 * sin(X - 8 * Y))) + 0.5;
 	}
 	private: System::Void solveBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-		resultTextBox->Text = "" + laba4Func(xTextBox, yTextBox);
+		inTextBox(resultTextBox, laba4Func(xTextBox, yTextBox));
 	}
 };
 }

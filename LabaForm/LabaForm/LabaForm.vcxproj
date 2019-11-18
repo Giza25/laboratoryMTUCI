@@ -138,7 +138,6 @@
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Func.h" />
     <ClInclude Include="laba4Form.h">
       <FileType>CppForm</FileType>
     </ClInclude>

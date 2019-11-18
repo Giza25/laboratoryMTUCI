@@ -42,6 +42,7 @@ namespace LabaForm {
 	private: System::Windows::Forms::Button^ laba5Btn;
 	private: System::Windows::Forms::Button^ laba4Btn;
 	private: System::Windows::Forms::Button^ laba6Btn;
+	private: System::Windows::Forms::Label^ meLabel;
 	protected:
 
 	protected:
@@ -66,15 +67,17 @@ namespace LabaForm {
 			this->laba5Btn = (gcnew System::Windows::Forms::Button());
 			this->laba4Btn = (gcnew System::Windows::Forms::Button());
 			this->laba6Btn = (gcnew System::Windows::Forms::Button());
+			this->meLabel = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// mainLabel
 			// 
+			this->mainLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->mainLabel->AutoSize = true;
 			this->mainLabel->Font = (gcnew System::Drawing::Font(L"Times New Roman", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->mainLabel->Location = System::Drawing::Point(789, 36);
+			this->mainLabel->Location = System::Drawing::Point(789, 39);
 			this->mainLabel->Name = L"mainLabel";
 			this->mainLabel->Size = System::Drawing::Size(759, 234);
 			this->mainLabel->TabIndex = 0;
@@ -83,16 +86,19 @@ namespace LabaForm {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(924, 334);
+			this->pictureBox1->Location = System::Drawing::Point(948, 276);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(508, 480);
+			this->pictureBox1->Size = System::Drawing::Size(440, 411);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Visible = false;
 			// 
 			// exitBtn
 			// 
+			this->exitBtn->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->exitBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->exitBtn->Location = System::Drawing::Point(44, 661);
@@ -137,12 +143,25 @@ namespace LabaForm {
 			this->laba6Btn->TabIndex = 5;
 			this->laba6Btn->UseVisualStyleBackColor = true;
 			// 
+			// meLabel
+			// 
+			this->meLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->meLabel->AutoSize = true;
+			this->meLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->meLabel->Location = System::Drawing::Point(1215, 690);
+			this->meLabel->Name = L"meLabel";
+			this->meLabel->Size = System::Drawing::Size(370, 124);
+			this->meLabel->TabIndex = 6;
+			this->meLabel->Text = L"Выполнил студент\r\nГруппы БСТ1902\r\nМкртычян Д.Г.\r\nПроверил доц. Гуриков С.Р.\r\n";
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->ClientSize = System::Drawing::Size(1584, 861);
+			this->Controls->Add(this->meLabel);
 			this->Controls->Add(this->laba6Btn);
 			this->Controls->Add(this->laba4Btn);
 			this->Controls->Add(this->laba5Btn);
