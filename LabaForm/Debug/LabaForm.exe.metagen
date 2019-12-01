@@ -1,5 +1,6 @@
   LabaForm.laba4Form.resources - Embedded, ContainedInManifestFile, 
   LabaForm.laba5Form.resources - Embedded, ContainedInManifestFile, 
+  LabaForm.Laba6Form.resources - Embedded, ContainedInManifestFile, 
   LabaForm.MainForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly LabaForm, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
@@ -20,6 +21,9 @@ Class LabaForm.laba4Form: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class LabaForm.laba5Form: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LabaForm.laba6Form: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class LabaForm.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
