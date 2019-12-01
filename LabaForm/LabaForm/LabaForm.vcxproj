@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="laba4Form.cpp" />
     <ClCompile Include="laba5Form.cpp" />
+    <ClCompile Include="laba6Form.cpp" />
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +143,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="laba5Form.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="laba6Form.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MainForm.h">
@@ -154,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="laba5Form.resx">
       <DependentUpon>laba5Form.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laba6Form.resx">
+      <DependentUpon>laba6Form.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>

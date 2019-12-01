@@ -102,11 +102,12 @@ namespace LabaForm {
 			// 
 			// backBtn
 			// 
+			this->backBtn->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
 			this->backBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->backBtn->Location = System::Drawing::Point(44, 709);
+			this->backBtn->Location = System::Drawing::Point(12, 749);
 			this->backBtn->Name = L"backBtn";
-			this->backBtn->Size = System::Drawing::Size(414, 105);
+			this->backBtn->Size = System::Drawing::Size(400, 100);
 			this->backBtn->TabIndex = 0;
 			this->backBtn->Text = L"Назад";
 			this->backBtn->UseVisualStyleBackColor = true;
@@ -114,11 +115,12 @@ namespace LabaForm {
 			// 
 			// exitBtn
 			// 
+			this->exitBtn->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->exitBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->exitBtn->Location = System::Drawing::Point(1142, 709);
+			this->exitBtn->Location = System::Drawing::Point(1172, 749);
 			this->exitBtn->Name = L"exitBtn";
-			this->exitBtn->Size = System::Drawing::Size(414, 105);
+			this->exitBtn->Size = System::Drawing::Size(400, 100);
 			this->exitBtn->TabIndex = 1;
 			this->exitBtn->Text = L"Выход";
 			this->exitBtn->UseVisualStyleBackColor = true;
@@ -126,10 +128,11 @@ namespace LabaForm {
 			// 
 			// labaTitle
 			// 
+			this->labaTitle->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->labaTitle->AutoSize = true;
 			this->labaTitle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->labaTitle->Location = System::Drawing::Point(274, 9);
+			this->labaTitle->Location = System::Drawing::Point(389, 9);
 			this->labaTitle->Name = L"labaTitle";
 			this->labaTitle->Size = System::Drawing::Size(976, 117);
 			this->labaTitle->TabIndex = 2;
@@ -139,6 +142,7 @@ namespace LabaForm {
 			// 
 			// taskLabel
 			// 
+			this->taskLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->taskLabel->AutoSize = true;
 			this->taskLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -150,20 +154,22 @@ namespace LabaForm {
 			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(746, 129);
+			this->pictureBox1->Location = System::Drawing::Point(758, 140);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(826, 243);
+			this->pictureBox1->Size = System::Drawing::Size(795, 219);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 4;
 			this->pictureBox1->TabStop = false;
 			// 
 			// aLabel
 			// 
+			this->aLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->aLabel->AutoSize = true;
 			this->aLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->aLabel->Location = System::Drawing::Point(233, 433);
+			this->aLabel->Location = System::Drawing::Point(187, 440);
 			this->aLabel->Name = L"aLabel";
 			this->aLabel->Size = System::Drawing::Size(65, 39);
 			this->aLabel->TabIndex = 5;
@@ -171,10 +177,11 @@ namespace LabaForm {
 			// 
 			// bLabel
 			// 
+			this->bLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->bLabel->AutoSize = true;
 			this->bLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->bLabel->Location = System::Drawing::Point(233, 530);
+			this->bLabel->Location = System::Drawing::Point(187, 537);
 			this->bLabel->Name = L"bLabel";
 			this->bLabel->Size = System::Drawing::Size(65, 39);
 			this->bLabel->TabIndex = 6;
@@ -182,10 +189,11 @@ namespace LabaForm {
 			// 
 			// xLabel
 			// 
+			this->xLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->xLabel->AutoSize = true;
 			this->xLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->xLabel->Location = System::Drawing::Point(677, 433);
+			this->xLabel->Location = System::Drawing::Point(631, 440);
 			this->xLabel->Name = L"xLabel";
 			this->xLabel->Size = System::Drawing::Size(63, 39);
 			this->xLabel->TabIndex = 7;
@@ -193,10 +201,11 @@ namespace LabaForm {
 			// 
 			// yLabel
 			// 
+			this->yLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->yLabel->AutoSize = true;
 			this->yLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->yLabel->Location = System::Drawing::Point(677, 530);
+			this->yLabel->Location = System::Drawing::Point(631, 537);
 			this->yLabel->Name = L"yLabel";
 			this->yLabel->Size = System::Drawing::Size(72, 39);
 			this->yLabel->TabIndex = 8;
@@ -204,56 +213,62 @@ namespace LabaForm {
 			// 
 			// aTextBox
 			// 
+			this->aTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->aTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->aTextBox->Location = System::Drawing::Point(304, 430);
+			this->aTextBox->Location = System::Drawing::Point(258, 437);
 			this->aTextBox->Name = L"aTextBox";
 			this->aTextBox->Size = System::Drawing::Size(154, 45);
 			this->aTextBox->TabIndex = 9;
 			// 
 			// bTextBox
 			// 
+			this->bTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->bTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->bTextBox->Location = System::Drawing::Point(304, 527);
+			this->bTextBox->Location = System::Drawing::Point(258, 534);
 			this->bTextBox->Name = L"bTextBox";
 			this->bTextBox->Size = System::Drawing::Size(154, 45);
 			this->bTextBox->TabIndex = 10;
 			// 
 			// xTextBox
 			// 
+			this->xTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->xTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->xTextBox->Location = System::Drawing::Point(746, 430);
+			this->xTextBox->Location = System::Drawing::Point(700, 437);
 			this->xTextBox->Name = L"xTextBox";
 			this->xTextBox->Size = System::Drawing::Size(154, 45);
 			this->xTextBox->TabIndex = 11;
 			// 
 			// yTextBox
 			// 
+			this->yTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->yTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->yTextBox->Location = System::Drawing::Point(746, 527);
+			this->yTextBox->Location = System::Drawing::Point(700, 534);
 			this->yTextBox->Name = L"yTextBox";
 			this->yTextBox->Size = System::Drawing::Size(154, 45);
 			this->yTextBox->TabIndex = 12;
 			// 
 			// resultTextBox
 			// 
+			this->resultTextBox->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->resultTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->resultTextBox->Location = System::Drawing::Point(363, 629);
+			this->resultTextBox->Location = System::Drawing::Point(384, 677);
 			this->resultTextBox->Name = L"resultTextBox";
 			this->resultTextBox->Size = System::Drawing::Size(905, 45);
 			this->resultTextBox->TabIndex = 13;
 			// 
 			// solveBtn
 			// 
+			this->solveBtn->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->solveBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->solveBtn->Location = System::Drawing::Point(1051, 454);
+			this->solveBtn->Location = System::Drawing::Point(1003, 451);
 			this->solveBtn->Name = L"solveBtn";
-			this->solveBtn->Size = System::Drawing::Size(414, 105);
+			this->solveBtn->Size = System::Drawing::Size(400, 100);
 			this->solveBtn->TabIndex = 14;
 			this->solveBtn->Text = L"Вычислить";
 			this->solveBtn->UseVisualStyleBackColor = true;

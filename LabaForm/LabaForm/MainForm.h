@@ -1,6 +1,7 @@
 #pragma once
 #include "laba4Form.h"
 #include "laba5Form.h"
+#include "laba6Form.h"
 
 namespace LabaForm {
 
@@ -141,7 +142,9 @@ namespace LabaForm {
 			this->laba6Btn->Name = L"laba6Btn";
 			this->laba6Btn->Size = System::Drawing::Size(562, 153);
 			this->laba6Btn->TabIndex = 5;
+			this->laba6Btn->Text = L"Лабораторная работа 6";
 			this->laba6Btn->UseVisualStyleBackColor = true;
+			this->laba6Btn->Click += gcnew System::EventHandler(this, &MainForm::laba6Btn_Click);
 			// 
 			// meLabel
 			// 
@@ -187,10 +190,16 @@ namespace LabaForm {
 		this->Hide();
 	}
 private: System::Void laba5Btn_Click(System::Object^ sender, System::EventArgs^ e) {
-	laba5Form^ f = gcnew laba5Form;
-	f->Owner = this;
-	f->Show();
-	this->Hide();
+		laba5Form^ f = gcnew laba5Form;
+		f->Owner = this;
+		f->Show();
+		this->Hide();
+	}
+private: System::Void laba6Btn_Click(System::Object^ sender, System::EventArgs^ e) {
+		laba6Form^ f = gcnew laba6Form;
+		f->Owner = this;
+		f->Show();
+		this->Hide();
 	}
 };
 }
