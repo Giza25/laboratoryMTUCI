@@ -53,6 +53,9 @@ namespace LabaForm {
 	private: System::Windows::Forms::Label^ aLabel;
 	private: System::Windows::Forms::Label^ bLabel;
 	private: System::Windows::Forms::Label^ stepLabel;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	protected:
 
 	private:
@@ -69,6 +72,7 @@ namespace LabaForm {
 		void InitializeComponent(void)
 		{
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(laba6Form::typeid));
 			this->resDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->aTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->bTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -81,11 +85,17 @@ namespace LabaForm {
 			this->aLabel = (gcnew System::Windows::Forms::Label());
 			this->bLabel = (gcnew System::Windows::Forms::Label());
 			this->stepLabel = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->resDGV))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// resDGV
 			// 
+			this->resDGV->AllowUserToAddRows = false;
+			this->resDGV->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->resDGV->BackgroundColor = System::Drawing::SystemColors::ControlLightLight;
 			this->resDGV->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->resDGV->ColumnHeadersHeight = 30;
@@ -100,7 +110,7 @@ namespace LabaForm {
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->resDGV->DefaultCellStyle = dataGridViewCellStyle1;
-			this->resDGV->Location = System::Drawing::Point(429, 162);
+			this->resDGV->Location = System::Drawing::Point(540, 187);
 			this->resDGV->Margin = System::Windows::Forms::Padding(2);
 			this->resDGV->Name = L"resDGV";
 			this->resDGV->RowHeadersVisible = false;
@@ -108,12 +118,13 @@ namespace LabaForm {
 			this->resDGV->RowTemplate->Height = 35;
 			this->resDGV->RowTemplate->ReadOnly = true;
 			this->resDGV->RowTemplate->Resizable = System::Windows::Forms::DataGridViewTriState::True;
-			this->resDGV->Size = System::Drawing::Size(258, 566);
+			this->resDGV->Size = System::Drawing::Size(249, 589);
 			this->resDGV->TabIndex = 0;
 			// 
 			// aTextBox
 			// 
-			this->aTextBox->Location = System::Drawing::Point(161, 198);
+			this->aTextBox->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->aTextBox->Location = System::Drawing::Point(208, 235);
 			this->aTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->aTextBox->Name = L"aTextBox";
 			this->aTextBox->Size = System::Drawing::Size(100, 32);
@@ -121,7 +132,8 @@ namespace LabaForm {
 			// 
 			// bTextBox
 			// 
-			this->bTextBox->Location = System::Drawing::Point(161, 385);
+			this->bTextBox->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->bTextBox->Location = System::Drawing::Point(208, 422);
 			this->bTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->bTextBox->Name = L"bTextBox";
 			this->bTextBox->Size = System::Drawing::Size(100, 32);
@@ -129,7 +141,8 @@ namespace LabaForm {
 			// 
 			// stepTextBox
 			// 
-			this->stepTextBox->Location = System::Drawing::Point(161, 556);
+			this->stepTextBox->Anchor = System::Windows::Forms::AnchorStyles::Left;
+			this->stepTextBox->Location = System::Drawing::Point(208, 593);
 			this->stepTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->stepTextBox->Name = L"stepTextBox";
 			this->stepTextBox->Size = System::Drawing::Size(100, 32);
@@ -137,7 +150,8 @@ namespace LabaForm {
 			// 
 			// maxTextBox
 			// 
-			this->maxTextBox->Location = System::Drawing::Point(830, 556);
+			this->maxTextBox->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
+			this->maxTextBox->Location = System::Drawing::Point(1035, 556);
 			this->maxTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->maxTextBox->Name = L"maxTextBox";
 			this->maxTextBox->Size = System::Drawing::Size(253, 32);
@@ -145,10 +159,12 @@ namespace LabaForm {
 			// 
 			// solveBtn
 			// 
-			this->solveBtn->Location = System::Drawing::Point(830, 180);
+			this->solveBtn->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->solveBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22));
+			this->solveBtn->Location = System::Drawing::Point(962, 262);
 			this->solveBtn->Margin = System::Windows::Forms::Padding(2);
 			this->solveBtn->Name = L"solveBtn";
-			this->solveBtn->Size = System::Drawing::Size(253, 66);
+			this->solveBtn->Size = System::Drawing::Size(400, 100);
 			this->solveBtn->TabIndex = 5;
 			this->solveBtn->Text = L"Протабулировать";
 			this->solveBtn->UseVisualStyleBackColor = true;
@@ -182,8 +198,9 @@ namespace LabaForm {
 			// 
 			// maxLabel
 			// 
+			this->maxLabel->Anchor = System::Windows::Forms::AnchorStyles::Bottom;
 			this->maxLabel->AutoSize = true;
-			this->maxLabel->Location = System::Drawing::Point(777, 528);
+			this->maxLabel->Location = System::Drawing::Point(982, 528);
 			this->maxLabel->Name = L"maxLabel";
 			this->maxLabel->Size = System::Drawing::Size(362, 26);
 			this->maxLabel->TabIndex = 8;
@@ -191,8 +208,9 @@ namespace LabaForm {
 			// 
 			// aLabel
 			// 
+			this->aLabel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->aLabel->AutoSize = true;
-			this->aLabel->Location = System::Drawing::Point(113, 201);
+			this->aLabel->Location = System::Drawing::Point(160, 238);
 			this->aLabel->Name = L"aLabel";
 			this->aLabel->Size = System::Drawing::Size(43, 26);
 			this->aLabel->TabIndex = 9;
@@ -200,8 +218,9 @@ namespace LabaForm {
 			// 
 			// bLabel
 			// 
+			this->bLabel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->bLabel->AutoSize = true;
-			this->bLabel->Location = System::Drawing::Point(113, 388);
+			this->bLabel->Location = System::Drawing::Point(160, 425);
 			this->bLabel->Name = L"bLabel";
 			this->bLabel->Size = System::Drawing::Size(43, 26);
 			this->bLabel->TabIndex = 10;
@@ -209,18 +228,56 @@ namespace LabaForm {
 			// 
 			// stepLabel
 			// 
+			this->stepLabel->Anchor = System::Windows::Forms::AnchorStyles::Left;
 			this->stepLabel->AutoSize = true;
-			this->stepLabel->Location = System::Drawing::Point(99, 559);
+			this->stepLabel->Location = System::Drawing::Point(146, 596);
 			this->stepLabel->Name = L"stepLabel";
 			this->stepLabel->Size = System::Drawing::Size(57, 26);
 			this->stepLabel->TabIndex = 11;
 			this->stepLabel->Text = L"Шаг:";
 			// 
+			// label1
+			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(638, 9);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(265, 52);
+			this->label1->TabIndex = 12;
+			this->label1->Text = L"Лабораторная Работа 6\r\nТабулирование функции";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// label2
+			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(383, 89);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(585, 52);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Протабулировать функцию на интервале \r\nс данным шагом и вывести ее максимальное з"
+				L"начение:\r\n";
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(974, 99);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(145, 63);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 14;
+			this->pictureBox1->TabStop = false;
+			// 
 			// laba6Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->ClientSize = System::Drawing::Size(1584, 861);
+			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->stepLabel);
 			this->Controls->Add(this->bLabel);
 			this->Controls->Add(this->aLabel);
@@ -236,9 +293,10 @@ namespace LabaForm {
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
 			this->Margin = System::Windows::Forms::Padding(6);
 			this->Name = L"laba6Form";
-			this->Text = L"laba6Form";
+			this->Text = L"Лабораторная работа 6";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->resDGV))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -286,6 +344,8 @@ namespace LabaForm {
 		double b = toDouble(bTextBox);
 		double step = toDouble(stepTextBox);
 		double max = laba6Func(a);
+		resDGV->Rows->Clear();
+		//resDGV->Refresh();
 		resDGV->ColumnCount = 2;
 		resDGV->Rows->Add("x", "y");
 		resDGV->Rows[0]->DefaultCellStyle->Alignment = DataGridViewContentAlignment::MiddleCenter;
