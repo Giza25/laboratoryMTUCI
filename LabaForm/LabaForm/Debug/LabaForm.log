@@ -1,1 +1,7 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1175,5): error MSB3644: не найдены ссылочные сборки для .NETFramework,Version=v4.8. Чтобы устранить эту проблему, установите пакет разработчика (пакет SDK или пакет нацеливания) для этой версии платформы или перенацельте приложение. Пакеты разработчика для платформы .NET Framework можно скачать на странице https://aka.ms/msbuild/developerpacks.
+﻿  MainForm.cpp
+  laba4Form.cpp
+  laba5Form.cpp
+  laba6Form.cpp
+  Создание кода...
+  laba4Form.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  LabaForm.vcxproj -> I:\M2CProg\LabaForm\Debug\LabaForm.exe
