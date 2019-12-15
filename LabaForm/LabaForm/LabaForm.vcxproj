@@ -105,6 +105,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -137,6 +139,7 @@
     <ClCompile Include="laba5Form.cpp" />
     <ClCompile Include="laba6Form.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="MyFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="laba4Form.h">

@@ -111,7 +111,7 @@ namespace LabaForm {
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->resDGV->DefaultCellStyle = dataGridViewCellStyle1;
-			this->resDGV->Location = System::Drawing::Point(540, 187);
+			this->resDGV->Location = System::Drawing::Point(540, 226);
 			this->resDGV->Margin = System::Windows::Forms::Padding(2);
 			this->resDGV->Name = L"resDGV";
 			this->resDGV->RowHeadersVisible = false;

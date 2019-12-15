@@ -1,16 +1,10 @@
 #pragma once
 
-using namespace System;
-using namespace System::ComponentModel;
-using namespace System::Collections;
 using namespace System::Windows::Forms;
-using namespace System::Data;
-using namespace System::Drawing;
 
-inline double toDouble(TextBox^);
-inline void inTextBox(TextBox^, double);
-inline void fillInDGV(DataGridView^, double, double);
-
+double toDouble(TextBox^);
+void inTextBox(TextBox^, double);
+void fillInDGV(DataGridView^, double, double);
 
 double laba4Func(double, double);
 void laba4Func(double, double, double&);
